@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0  user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/zhangdan.css">
+</head>
+<script src="js/jquery-1.10.1.js">
+
+</script>
+
+<body>
+
+    <audio src="zhangdan/mp3/1.mp3" id="mp3one"></audio>
+    <audio src="zhangdan/mp3/2.mp3" id="mp3two"></audio>
+    <audio src="zhangdan/mp3/3.mp3" id="mp3there"></audio>
+    <audio src="zhangdan/mp3/4.mp3" id="mp3four"></audio>
+   
+    <div class="war">
+        <!-- <div class="var"> -->
+
+        <img src="zhangdan/img2/z01.png" alt="1" class="a1 non">
+        <img src="zhangdan/img2/z02-03-22-23.png" alt="2" class="a2 non">
+        <img src="zhangdan/img2/z02-03-22-23.png" alt="3" class="a3 non">
+        <img src="zhangdan/img2/z04-24.png" alt="4" class="a4 non">
+        <img src="zhangdan/img2/z06-07.png" alt="5" class="a5 non">
+        <img src="zhangdan/img2/z06-07.png" alt="6" class="a6 non">
+        <img src="zhangdan/img2/z08.png" alt="" class="a7 non">
+        <img src="zhangdan/img2/z09-z15-z30-x.png" alt="" class="one non">
+
+        <img src="zhangdan/img2/z11-25-26-27.png" alt="" class="b2 non">
+        <img src="zhangdan/img2/z11-25-26-27.png" alt="" class="b3 non">
+        <img src="zhangdan/img2/z11-25-26-27.png" alt="" class="b4 non">
+        <img src="zhangdan/img2/z11-25-26-27.png" alt="" class="b5 non">
+        <img src="zhangdan/img2/z09-z15-z30-x.png" alt="" class="two non">
+
+        <img src="zhangdan/img2/z28.png" alt="14" class="c2 non">
+        <img src="zhangdan/img2/z04-24.png" alt="" class="c3 non">
+        <img src="zhangdan/img2/z02-03-22-23.png" alt="16" class="c4 non">
+        <img src="zhangdan/img2/z02-03-22-23.png" alt="17" class="c5 non">
+        <img src="zhangdan/img2/z09-z15-z30-x.png" alt="18" class="there non">
+
+        <img src="zhangdan/img2/z13.png" alt="19" class="d2 non">
+        <img src="zhangdan/img2/z11-25-26-27.png" alt="20" class="d3 non">
+        <img src="zhangdan/img2/z10.png" alt="21" class="d4 non">
+        <img src="zhangdan/img2/z12.png" alt="22" class="four">
+
+        <img src="zhangdan/img2/z21-z33.png" alt="23" class="b1 non">
+        <img src="zhangdan/img2/z20.png" alt="24" class="tel non">
+        <img src="zhangdan/img2/z31.png" alt="25" class="shu non">
+        <img src="zhangdan/img2/z21-z33.png" alt="26" class="c1 non">
+        <img src="zhangdan/img2/z32.png" alt="27" class="wifi non">
+        <img src="zhangdan/img2/z34.png" alt="28" class="qi non">
+        <img src="zhangdan/img2/z17.png" alt="29" class="d1 non">
+        <img src="zhangdan/img2/z16.png" alt="30" class="money  non">
+        <img src="zhangdan/img2/z14.png" alt="31" class="non">
+        <img src="zhangdan/img2/z29.png" alt="32" class="non">
+        <img src="zhangdan/img2/z15.png" alt="33" class="non">
+        <img src="zhangdan/img2/z36.png" alt="34" class="non">
+        <img src="zhangdan/img1/zi.png" alt="zi" class="zi non">
+        <div class="zhuan"></div>
+        <!-- </div> -->
+        <img src="zhangdan/gezi/gz1.png" alt="" id="gz">
+
+        <img src="zhangdan/img1/ks.png" alt="" class="ks">
+
+        <img src="zhangdan/img1/qiu1.png" alt="" id="qiu1">
+        <img src="zhangdan/img1/qiu2.png" alt="" id="qiu2">
+        <img src="zhangdan/img1/qiu3.png" alt="" id="qiu3">
+        <img src="zhangdan/img1/qiuzi.png" alt="" id="qiuzi">
+
+
+
+        <script>
+            $(".ks").click(function () {
+                $(".ks").fadeOut(3000);
+
+                setTimeout(() => {
+                    $(".zi").fadeIn(4000);
+                    $(".shu").animate({
+                        bottom: "2.1rem"
+                    }, 500, "linear")
+                    $(".shu").animate({
+                        bottom: "1.8rem"
+                    }, 500, "linear")
+                    $(".qi").animate({
+                        bottom: "1rem"
+                    }, 500, "linear")
+                    $(".qi").animate({
+                        bottom: "0.7rem"
+                    }, 500, "linear")
+                    $(".zhuan").animate({
+                        bottom: "0.3rem"
+                    }, 500, "linear")
+                    $(".zhuan").animate({
+                        bottom: "0rem"
+                    }, 500, "linear", function () {
+                        zky();
+                    })
+                }, 2000);
+
+                var tel = document.querySelector(".tel");
+                var wifi = document.querySelector(".wifi");
+                var money = document.querySelector(".money");
+
+                var b = 265;
+                // var c = parseInt(getComputedStyle(wifi, null)["bottom"]);
+                var c = 328;
+                // var d = parseInt(getComputedStyle(money, null)["bottom"]);
+                var d = 182;
+                console.log(c);
+                console.log(d);
+
+                function telwmmove(adc, bbb) {
+                    var move = 0;
+                    var asa = true;
+                    var a = setInterval(function () {
+                        if (asa) {
+                            move++;
+                        } else {
+                            move--;
+                        }
+                        if (move >= 20) {
+                            asa = false;
+                        } else if (move <= 0) {
+                            asa = true;
+                        }
+                        adc.style.bottom = bbb + move + "px";
+                    }, 100);
+                }
+
+                var one = document.querySelector(".one");
+                var two = document.querySelector(".two");
+                var there = document.querySelector(".there");
+                var four = document.querySelector(".four");
+                var flag = true;
+                var tag = true;
+
+                function zky() {
+                    setTimeout(() => {
+                        $("#gz").animate({
+                            bottom: "1.2rem"
+                        }, 500, "linear")
+                        $("#gz").animate({
+                            bottom: "0rem"
+                        }, 500, "linear")
+                        $(".a1").animate({
+                            bottom: "1.2rem"
+                        }, 500, "linear")
+                        $(".a1").animate({
+                            bottom: "0rem"
+                        }, 500, "linear")
+                    }, 1000);
+                    setTimeout(() => {
+                        $(".a2").animate({
+                            bottom: "-2rem"
+                        }, 500, "linear")
+                        $(".a2").animate({
+                            bottom: "-3.2rem"
+                        }, 500, "linear")
+                    }, 1500);
+                    setTimeout(() => {
+                        $(".a3").animate({
+                            bottom: "-1.8rem"
+                        }, 500, "linear")
+                        $(".a3").animate({
+                            bottom: "-3rem"
+                        }, 500, "linear")
+                    }, 2000);
+                    setTimeout(() => {
+                        $(".a4").animate({
+                            bottom: "-2.25rem"
+                        }, 500, "linear")
+                        $(".a4").animate({
+                            bottom: "-3.45rem"
+                        }, 500, "linear")
+                    }, 2500);
+                    setTimeout(() => {
+                        $(".a5").animate({
+                            bottom: "0.78rem"
+                        }, 500, "linear")
+                        $(".a5").animate({
+                            bottom: "-0.42rem"
+                        }, 500, "linear")
+                    }, 3000);
+                    setTimeout(() => {
+                        $(".a6").animate({
+                            bottom: "1.1rem"
+                        }, 500, "linear")
+                        $(".a6").animate({
+                            bottom: "-0.1rem"
+                        }, 500, "linear")
+                    }, 3500);
+                    setTimeout(() => {
+                        $(".a7").animate({
+                            bottom: "0.6rem"
+                        }, 500, "linear")
+                        $(".a7").animate({
+                            bottom: "-0.6rem"
+                        }, 500, "linear")
+                    }, 4000);
+                    setTimeout(() => {
+                        $(".one").animate({
+                            bottom: "1.37rem"
+                        }, 500, "linear")
+                        $(".one").animate({
+                            bottom: "0.17rem"
+                        }, 500, "linear")
+                    }, 4500);
+
+                }
+
+
+                function zker() {
+
+                    setTimeout(() => {
+                        $(".b1").animate({
+                            bottom: "2.6rem"
+                        }, 500, "linear")
+                        $(".b1").animate({
+                            bottom: "1.4rem"
+                        }, 500, "linear")
+                        $(".tel").animate({
+                            bottom: "6rem"
+                        }, 500, "linear")
+                        $(".tel").animate({
+                            bottom: "4.8rem"
+                        }, 500, "linear", function () {
+
+                            telwmmove(tel, b);
+                        })
+                    }, 1000);
+                    setTimeout(() => {
+                        $(".b2").animate({
+                            bottom: "2.1rem"
+                        }, 500, "linear")
+                        $(".b2").animate({
+                            bottom: "0.9rem"
+                        }, 500, "linear")
+                    }, 1500);
+                    setTimeout(() => {
+                        $(".b3").animate({
+                            bottom: "2.12rem"
+                        }, 500, "linear")
+                        $(".b3").animate({
+                            bottom: "1.32rem"
+                        }, 500, "linear")
+                    }, 2000);
+                    setTimeout(() => {
+                        $(".b4").animate({
+                            bottom: "2.92rem"
+                        }, 500, "linear")
+                        $(".b4").animate({
+                            bottom: "1.72rem"
+                        }, 500, "linear")
+                        // $(".shu").animate({
+                        //     bottom: "2rem"
+                        // }, 500, "linear")
+                        // $(".shu").animate({
+                        //     bottom: "1.8rem"
+                        // }, 500, "linear")
+                    }, 2500);
+                    setTimeout(() => {
+                        $(".b5").animate({
+                            bottom: "3.3rem"
+                        }, 500, "linear")
+                        $(".b5").animate({
+                            bottom: "2.1rem"
+                        }, 500, "linear")
+                    }, 3000);
+                    setTimeout(() => {
+                        $(".two").animate({
+                            bottom: "3.278rem"
+                        }, 500, "linear")
+                        $(".two").animate({
+                            bottom: "2.078rem"
+                        }, 500, "linear")
+                    }, 3500);
+
+                }
+
+                function zkth() {
+                    setTimeout(() => {
+                        $(".c1").animate({
+                            bottom: "4.2rem"
+                        }, 500, "linear")
+                        $(".c1").animate({
+                            bottom: "3rem"
+                        }, 500, "linear")
+                        $(".wifi").animate({
+                            bottom: "7.5rem"
+                        }, 500, "linear")
+                        $(".wifi").animate({
+                            bottom: "6.3rem"
+                        }, 500, "linear", function () {
+                            telwmmove(wifi, c);
+                        })
+                    }, 1000);
+                    setTimeout(() => {
+                        $(".c2").animate({
+                            bottom: "5.3rem",
+                        })
+                        $(".c2").animate({
+                            bottom: "4.1rem",
+                        })
+                    }, 1500);
+                    setTimeout(() => {
+                        $(".c3").animate({
+                            bottom: "0.6rem",
+                        })
+                        $(".c3").animate({
+                            bottom: "-0.6rem",
+                        })
+                    }, 2000);
+                    setTimeout(() => {
+                        $(".c4").animate({
+                            bottom: "1.1rem",
+                        })
+                        $(".c4").animate({
+                            bottom: "-0.1rem",
+                        })
+                    }, 2500);
+                    setTimeout(() => {
+                        $(".c5").animate({
+                            bottom: "0.9rem",
+                        })
+                        $(".c5").animate({
+                            bottom: "-0.3rem",
+                        })
+                    }, 3000);
+                    setTimeout(() => {
+                        $(".there").animate({
+                            bottom: "1rem",
+                        })
+                        $(".there").animate({
+                            bottom: "-0.29rem",
+                        })
+                    }, 3500);
+                }
+
+                function zkfo() {
+                    setTimeout(() => {
+                        $(".d1").animate({
+                            bottom: "0.7rem"
+                        }, 500, "linear")
+                        $(".d1").animate({
+                            bottom: "-0.5rem"
+                        }, 500, "linear")
+                        $(".money").animate({
+                            bottom: "4.7rem"
+                        }, 500, "linear")
+                        $(".money").animate({
+                            bottom: "3.5rem"
+                        }, 500, "linear", function () {
+                            telwmmove(money, d);
+                        })
+                    }, 1000);
+                    setTimeout(() => {
+                        $(".d2").animate({
+                            bottom: "3.54rem"
+                        }, 500)
+                        $(".d2").animate({
+                            bottom: "2.34rem"
+                        }, 500)
+                    }, 1500);
+                    setTimeout(() => {
+                        $(".d3").animate({
+                            bottom: "0.5rem"
+                        }, 500)
+                        $(".d3").animate({
+                            bottom: "-0.7rem"
+                        }, 500)
+                    }, 2000);
+                    setTimeout(() => {
+                        $(".d4").animate({
+                            bottom: "1rem"
+                        }, 500)
+                        $(".d4").animate({
+                            bottom: "-0.26rem"
+                        }, 500)
+                    }, 2500);
+                    setTimeout(() => {
+                        $(".four").animate({
+                            bottom: "-0.84rem"
+                        }, 500)
+                        $(".four").animate({
+                            bottom: "-2.04rem"
+                        }, 500)
+                    }, 3000);
+
+                }
+                one.onclick = function () {
+                    on();
+                    $("#gz").animate({
+                        bottom: "0.8rem",
+                        left: "1rem"
+                    }, 1500, "linear", function () {
+                        flag = false;
+
+                    })
+                    $("#gz").animate({
+                        bottom: "1.4rem",
+                        left: "2rem"
+                    }, 1500, "linear", function () {
+                        flag = true;
+                    })
+                    $("#gz").animate({
+                        bottom: "2.5rem",
+                        left: "0.4rem"
+                    }, 2000, "linear", function () {
+                        flag = false;
+                    })
+                    $("#gz").animate({
+                        bottom: "3.5rem",
+                        left: "1.3rem"
+                    }, 1000, "linear", function () {
+                        flag = true;
+                        tag = false;
+                        zker();
+                    })
+                }
+
+                two.onclick = function () {
+                    tag = true;
+                    flag = true;
+                    on1();
+                    $("#gz").animate({
+                        left: "0.9em",
+                        bottom: "3.8rem"
+                    }, 1000, "linear", function () {
+                        flag = false;
+                        // tag=false;
+                        on2();
+                    })
+                    $("#gz").animate({
+                        left: "3.8rem",
+                        bottom: "5.4rem"
+                    }, 2000, "linear", function () {
+                        tag = false;
+                        zkth();
+
+
+                    })
+                }
+
+                there.onclick = function () {
+                    tag = true;
+                    flag = true;
+                    on3();
+                    $("#gz").animate({
+                        left: "4.8rem",
+                        bottom: "4.2rem"
+                    }, 1000, "linear", function () {
+                        tag = false;
+                        // tag=false;
+                        on4();
+                    })
+                    $("#gz").animate({
+                        left: "3.8rem",
+                        bottom: "3.7rem"
+                    }, 1000, "linear", function () {
+                        tag = true;
+                        flag = false;
+                        on3();
+                    })
+                    $("#gz").animate({
+                        left: "5rem",
+                        bottom: "3rem"
+                    }, 1000, "linear", function () {
+                        tag = false;
+                        zkfo();
+                    })
+                }
+                four.onclick = function () {
+                    tag = true;
+                    flag = true;
+                    on4();
+                    $("#gz").animate({
+                        left: "3.5rem",
+                        bottom: "1.8rem"
+                    }, 1000, "linear", function () {
+                        flag = false;
+                        // tag=false;
+                        on5();
+                    })
+                    $("#gz").animate({
+                        left: "2.8rem",
+                        bottom: "2.6rem"
+                    }, 1000, "linear", function () {
+                        tag = false;
+                        setTimeout(() => {
+                            $(".non").animate({
+                                bottom: "-10rem"
+                            })
+                            $(".tel").remove();
+                            $(".wifi").remove();
+                            $(".money").remove();
+                            $(".zhuan").remove();
+
+                        }, 800);
+                        setTimeout(() => {
+                            $("#gz").animate({
+                                left: "2.8rem",
+                                bottom: "4.8rem"
+                            }, 2500, "linear")
+                            $(".four").animate({
+                                bottom: "0rem"
+                            }, 2500, "linear", function () {
+                                $(".war").css("backgroundPosition", "top");
+                                setTimeout(() => {
+                                    $("#qiu1").animate({
+                                        top: "4rem"
+                                    }, 1000, "linear")
+                                    $("#qiu2").animate({
+                                        right: "1rem"
+                                    }, 1000, "linear")
+                                    $("#qiu3").animate({
+                                        left: "0.4rem"
+                                    }, 1000, "linear")
+                                    $("#qiuzi").fadeIn(2000);
+                                }, 500);
+                            })
+                        }, 1000, "linear");
+                    })
+                }
+
+                function on() {
+                    if (flag) {
+                        var a = 1;
+                        var huangz = setInterval(() => {
+                            if (a > 5) {
+                                a = 1
+                            }
+                            $("#gz").attr('src', 'zhangdan/gezi/gz' + a + '.png');
+                            a++;
+                            if (tag == false) {
+                                clearInterval(huangz);
+                            }
+                            if (flag == false) {
+                                clearInterval(huangz);
+                                on();
+                            }
+
+                        }, 100);
+                    } else {
+                        var a = 11;
+                        var huangz = setInterval(() => {
+                            if (a > 15) {
+                                a = 11
+                            }
+                            $("#gz").attr('src', 'zhangdan/gezi/gz' + a + '.png');
+                            a++;
+                            // if(tag==false){
+                            //     clearInterval(huangz);
+                            // }
+                            if (flag == true) {
+                                clearInterval(huangz);
+                                on();
+                            }
+
+                        }, 100);
+                    }
+                }
+
+
+
+                function on1() {
+                    var a = 1;
+                    var huangz = setInterval(() => {
+                        if (a > 5) {
+                            a = 1
+                        }
+                        $("#gz").attr('src', 'zhangdan/gezi/gz' + a + '.png');
+                        a++;
+                        if (flag == false) {
+                            clearInterval(huangz);
+                        }
+
+                    }, 100);
+                }
+
+                function on5() {
+                    var a = 1;
+                    var huangz = setInterval(() => {
+                        if (a > 5) {
+                            a = 1
+                        }
+                        $("#gz").attr('src', 'zhangdan/gezi/gz' + a + '.png');
+                        a++;
+                        if (tag == false) {
+                            clearInterval(huangz);
+                        }
+
+                    }, 100);
+                }
+
+                function on2() {
+                    var a = 11;
+                    var huangz = setInterval(() => {
+                        if (a > 15) {
+                            a = 11
+                        }
+                        $("#gz").attr('src', 'zhangdan/gezi/gz' + a + '.png');
+                        a++;
+                        if (tag == false) {
+                            clearInterval(huangz);
+                        }
+                    }, 100);
+                }
+
+                function on3() {
+                    var a = 21;
+                    var huangz = setInterval(() => {
+                        if (a > 25) {
+                            a = 21
+                        }
+                        $("#gz").attr('src', 'zhangdan/gezi/gz' + a + '.png');
+                        a++;
+                        if (tag == false) {
+                            clearInterval(huangz);
+                        }
+                    }, 100);
+                }
+
+                function on4() {
+                    var a = 31;
+                    var huangz = setInterval(() => {
+                        if (a > 35) {
+                            a = 31
+                        }
+                        $("#gz").attr('src', 'zhangdan/gezi/gz' + a + '.png');
+                        a++;
+                        if (flag == false) {
+                            clearInterval(huangz);
+                        }
+                    }, 100);
+                }
+            })
+        </script>
+    </div>
+</body>
+
+</html>
